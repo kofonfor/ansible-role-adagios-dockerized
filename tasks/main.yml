@@ -1,6 +1,6 @@
 ---
-#- name: clone a repo
-#  git: repo=https://github.com/kofonfor/docker-adagios-git.git dest=/root/docker-adagios-git
+- name: clone a repo
+  git: repo=https://github.com/kofonfor/docker-adagios-git.git dest=/root/docker-adagios-git
 
 - name: build a Docker image for Adagios
   command: docker build -t kofonfor/adagios-git:0.1.0 --rm /root/docker-adagios-git
